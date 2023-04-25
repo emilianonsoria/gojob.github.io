@@ -240,20 +240,20 @@ body {
     color: var(--clr);
     width: 80px;
     height: 80px;
-    box-shadow: 0 0 0 4px #009d71,
-    0 0 0 6px var(--clr);
+    box-shadow: 0 0 0 2px #009d71,
+    0 0 0 2px var(--clr);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.5rem;
     background: #1d3b57;
     transition: 0.5s ease-in-out;
-    border-radius: 5px;
+    border-radius: 50px;
   }
   .container1 .box:hover .content .icon{
     background: var(--clr);
     color: #1d3b57;
-    box-shadow: 0 0 0 4px #1d3b57,
+    box-shadow: 0 0 0 2px #009d71,
     0 0 0 300px var(--clr);
   }
   .container1 .box .content .text h3{

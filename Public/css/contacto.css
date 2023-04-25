@@ -259,6 +259,7 @@ body {
     justify-content: center;
     padding-left: 100px;
     padding-right: 100px;
+    align-items: center;
 
   }
   .izquierda h1{
@@ -278,6 +279,24 @@ body {
     color: #fff;
     filter: drop-shadow(4px 6px 5px black);
   }
+  .izquierda a{
+    text-transform: uppercase;
+    border: 2px solid #009d71;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    color: #009d71;
+    font-weight: 600;
+  }
+  .izquierda a:hover{
+    background-color: #009d71;
+    transition: 0.5s ease-in-out;
+    color: #1d3b57;
+  }
+
   .derecha{
     width: 70%;
     display: flex;

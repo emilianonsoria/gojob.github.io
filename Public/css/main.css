@@ -76,8 +76,24 @@ body {
   font-weight: bold;
 }
 
-/*BANNER*/
+@media (max-width:700px){
+}
 
+/*BANNER*/
+@media (max-width:700px){
+  body{
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+  .hero{
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+  .hero .container{
+    padding: 0;
+    margin: 0;
+  }
+}
 .hero {
     background-image: url(/Asset/img/banner.jpg);
     background-repeat: no-repeat;
@@ -157,7 +173,41 @@ body {
 
 }
 
+@media (max-width:700px){
+  .container #go{
+    font-size: 50px;
+  }
+  .container #job{
+    font-size: 50px;
+  }
+  .container p{
+    font-size: 30px;
+  }
+}
+
 /*DIVISOR*/
+@media (max-width:700px){
+  .mitad{
+    flex-direction: column;
+    align-items: center;
+  }
+  .mitad .izquierda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .mitad .izquierda h1{
+    font-size: 30px;
+  }
+  .mitad .izquierda p{
+    font-size: 12px;
+  }
+  .mitad .derecha{
+    display: none;
+  }
+}
 
 .izquierda{
   height: 70vh;
@@ -201,6 +251,11 @@ body {
 }
 
 /*CARTAS*/
+@media (max-width:700px){
+  .container1{
+    flex-direction: column;
+  }
+}
 
 .container1{
   width: 100%;
@@ -242,6 +297,22 @@ body {
 }
 
 /*DIVISOR TESTIMONIOS*/
+@media (max-width:700px){
+  .mitad-test{
+    flex-direction: column;
+  }
+  .izquierda-div{
+    justify-content: center;
+    align-items: center;
+  }
+  .izquierda-div .wrap{
+    padding: 0;
+    margin: 0;
+  }
+  .derecha-div .card1{
+    display: none;
+  }
+}
 
 .izquierda-div{
   height: 70vh;
@@ -390,10 +461,6 @@ body {
 }
 
 .card1 .links a:nth-child(3):hover {
-  color: #21262d;
-}
-
-.card1 .links a:nth-child(4):hover {
   color: #d6249f;
 }
 
@@ -475,7 +542,7 @@ body {
   width: calc(150px * 14);
   align-items: center;
   justify-content: center;
-  
+  column-gap: 40px;
 }
 .slider .slide{
   width: 150px;
