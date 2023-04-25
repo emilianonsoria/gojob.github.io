@@ -76,24 +76,53 @@ body {
   font-weight: bold;
 }
 
-@media (max-width:700px){
+@media (max-width:480px){
+  .nav .container{
+    flex-direction: column;
+  }
+}
+@media (max-width:1024px){
+  .nav .container{
+    flex-direction: column;
+  }
 }
 
 /*BANNER*/
-@media (max-width:700px){
-  body{
-    padding-right: 0px;
-    margin-right: 0px;
+@media (max-width:480px){
+  .hero #go {
+    font-size: 50px;
   }
-  .hero{
-    padding-right: 0px;
-    margin-right: 0px;
+  .hero #job{
+    font-size: 50px;
   }
-  .hero .container{
-    padding: 0;
-    margin: 0;
+  .hero p{
+    font-size: 14px;
   }
 }
+@media (max-width:1024px){
+  .hero #go {
+    font-size: 100px;
+  }
+  .hero #job{
+    font-size: 100px;
+  }
+  .hero p{
+    font-size: 30px;
+  }
+}
+@media (min-width:1680px){
+  .hero #go {
+    font-size: 100px;
+  }
+  .hero #job{
+    font-size: 100px;
+  }
+  .hero p{
+    font-size: 40px;
+    padding: 0 50px 0 50px;
+  }
+}
+
 .hero {
     background-image: url(/Asset/img/banner.jpg);
     background-repeat: no-repeat;
@@ -127,7 +156,6 @@ body {
 
 .hero #go {
   color: #009d71;
-  font-size: 100px;
   margin: -20px 0 20px;
   font-weight: 500;
   letter-spacing: 5px;
@@ -135,7 +163,6 @@ body {
 
 .hero #job {
     color: #1d3b57;
-    font-size: 100px;
     margin: -20px 0 20px;
     font-weight: 300;
     padding-left: 10px;
@@ -143,12 +170,9 @@ body {
   }
 
 .hero p {
-  font-size: 40px;
   letter-spacing: 1px;
   color: white;
   filter: drop-shadow(4px 6px 5px black);
-  padding-left: 100px;
-  padding-right: 100px;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 300;
@@ -173,20 +197,8 @@ body {
 
 }
 
-@media (max-width:700px){
-  .container #go{
-    font-size: 50px;
-  }
-  .container #job{
-    font-size: 50px;
-  }
-  .container p{
-    font-size: 30px;
-  }
-}
-
 /*DIVISOR*/
-@media (max-width:700px){
+@media (max-width:480px){
   .mitad{
     flex-direction: column;
     align-items: center;
@@ -200,13 +212,19 @@ body {
   }
   .mitad .izquierda h1{
     font-size: 30px;
+    margin: 0;
+    padding: 0;
   }
   .mitad .izquierda p{
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 15px;
   }
   .mitad .derecha{
     display: none;
   }
+}
+@media (max-width:1024px){
+  
 }
 
 .izquierda{
@@ -216,8 +234,7 @@ body {
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 0 50px 0 50px;
 }
 .izquierda h1{
   font-size: 40px;
@@ -251,11 +268,35 @@ body {
 }
 
 /*CARTAS*/
-@media (max-width:700px){
+@media (max-width:480px){
   .container1{
     flex-direction: column;
+    align-items: center;
+  }
+  .container1 .card{
+    width: 250px;
+  }
+  .container1 .card figure img{
+    object-fit: cover;
+    object-position: center center;
+    height: auto;
   }
 }
+@media (max-width:1024px){
+  .container1{
+    flex-direction: column;
+    align-items: center;
+  }
+  .container1 .card{
+    width: 80%;
+  }
+  .container1 .card figure img{
+    object-fit: cover;
+    object-position: center center;
+    height: auto;
+  }
+}
+
 
 .container1{
   width: 100%;
@@ -297,30 +338,47 @@ body {
 }
 
 /*DIVISOR TESTIMONIOS*/
-@media (max-width:700px){
+@media (max-width:480px){
   .mitad-test{
     flex-direction: column;
   }
   .izquierda-div{
-    justify-content: center;
-    align-items: center;
+    width: 100%;
   }
   .izquierda-div .wrap{
-    padding: 0;
     margin: 0;
+    padding: 0;
+    height: 300px;
+    width: 300px;
   }
-  .derecha-div .card1{
-    display: none;
+  .izquierda-div .wrap h1{
+    font-size: 30px;
+  }
+  .izquierda-div .wrap p{
+    font-size: 15px;
+  }
+  .derecha-div{
+    flex-direction: column;
+  }
+  .card1 .links{
+    visibility: hidden;
+  }
+}
+@media (max-width:1024px){
+  .derecha-div{
+    flex-direction: column;
   }
 }
 
+
 .izquierda-div{
+  display: flex;
   height: 70vh;
   width: 50%;
-  display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -349,15 +407,16 @@ body {
 
 .mitad-test{
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Asset/img/equipo.jpg);
 }
 
 .derecha-div{
-  height: 70vh;
-  width: 50%;
   display: flex;
+  width: 50%;
   align-items: center;
   justify-content: center;
 }
@@ -562,6 +621,67 @@ body {
   }
 }
 /*FORMULARIO*/
+@media (max-width:480px){
+  .formulario{
+    flex-direction: column;
+  }
+  .formulario .form-izq{
+    width: 100%;
+  }
+  .formulario .form-izq .titulo-form{
+    margin: 0;
+    padding: 0;
+  }
+  .formulario .form-izq img{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+  }
+  .formulario .form-der{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .formulario .form-der .contact-form{
+    border-radius: 10px;
+    text-align: center;
+  }
+  .formulario .form-der h3{
+    border-radius: 10px;
+    padding: 10px 0 10px 0;
+  }
+  .contact-form form p{
+    grid-column: 1 / 3;
+  }
+  .formulario .form-der .contact-info{
+    display: none;
+  }
+}
+@media (max-width:1024px){
+  .formulario{
+    flex-direction: column;
+  }
+  .formulario .form-izq{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 20vh;
+  }
+  .formulario .form-izq .titulo-form .titulo{
+    font-size: 50px;
+  }
+  .form-izq img{
+    display: none;
+  }
+  .formulario .form-der{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .contact-form form p{
+    grid-column: 1 / 3;
+  }
+}
 .titulo-form{
   width: 100%;
   text-align: center;
